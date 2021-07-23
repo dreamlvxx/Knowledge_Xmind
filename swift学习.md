@@ -942,6 +942,20 @@ https://www.codercto.com/a/85380.html
 
 
 
+# swiftui
+
+@State 可在struct中改变变量
+
+
+
+$可以实现双向绑定
+
+
+
+可以使用Binding自定义双向绑定
+
+
+
 
 
 
