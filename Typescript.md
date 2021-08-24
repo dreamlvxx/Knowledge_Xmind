@@ -198,6 +198,110 @@ function buildName4(firstName: string, ...restOfName: string[]) {
 let employeeName = buildName4("Joseph", "Samuel", "Lucas", "MacKinzie");
 ```
 
+# 泛型
+
+同java
+
+# 枚举
+
+## 反向映射
+
+```
+enum Enum {
+  A
+}
+const ass = Enum.A
+const nameOfA = Enum[ass]// "A"
+console.log(nameOfA)
+```
+
+## 常量枚举
+
+了避免在额外生成的代码上的开销和额外的非直接的对枚举成员的访问，我们可以使用 `const`枚举.它们在编译阶段会被删除。 常量枚举成员在使用的地方会被内联进来
+
+```
+const enum E {
+	A = 1,
+	B = A * 2
+}
+```
+
+# 类型推论
+
+# 类型兼容性
+
+TypeScript结构化类型系统的基本规则是，如果`x`要兼容`y`，那么`y`至少具有与`x`相同的属性。
+
+```
+interface Named {
+  name: string;
+}
+
+// y's inferred type is { name: string; location: string; }
+const y = { name: 'Alice', location: 'Seattle' }
+const x: Named= y
+```
+
+# 高级类型
+
+## 交叉类型
+
+T & U
+
+
+
+## 联合类型 
+
+T | U
+
+
+
+# Symbol
+
+
+
+# 迭代器和生成器
+
+### `for..of` vs. `for..in` 语句
+
+`for..in`迭代的是对象的 *键* 的列表，而`for..of`则迭代对象的键对应的值。
+
+```
+const list = [4, 5, 6]
+
+for (const i in list) {
+  console.log(i) // "0", "1", "2",
+}
+
+for (const i of list) {
+  console.log(i) // "4", "5", "6"
+}
+```
+
+
+
+# 模块
+
+
+
+# Mixins
+
+ts里的mixin通过implements和属性站位，最后通过把属性占位进行替换来实现mixin的效果。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
