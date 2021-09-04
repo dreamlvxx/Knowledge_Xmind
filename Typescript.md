@@ -256,6 +256,25 @@ T | U
 
 
 
+## 索引类型
+
+### 索引类型查询操作符
+
+**keyof T**
+
+对于任何类型 `T`， `keyof T`的结果为 `T`上已知的公共属性名的联合
+
+### 索引访问操作符
+
+T[K]
+
+## 映射类型
+
+```
+type Nullable<T> = { [P in keyof T]: T[P] | null }
+type Partial<T> = { [P in keyof T]?: T[P] }
+```
+
 # Symbol
 
 
